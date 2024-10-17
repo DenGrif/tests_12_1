@@ -16,21 +16,21 @@ from runner import Runner
 #         self.assertEqual(runner.distance, 100)
 #
 #     def test_challenge(self):
-#         # Пишем два объекта класса Runner
+#         # РџРёС€РµРј РґРІР° РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° Runner
 #         runner1 = Runner("Runner1")
 #         runner2 = Runner("Runner2")
-#         # Вызываем у первого run, а у второго walk 10 раз
+#         # Р’С‹Р·С‹РІР°РµРј Сѓ РїРµСЂРІРѕРіРѕ run, Р° Сѓ РІС‚РѕСЂРѕРіРѕ walk 10 СЂР°Р·
 #         for _ in range(10):
 #             runner1.run()
 #             runner2.walk()
-#         # Проверяем на не равность (100 != 50)
+#         # РџСЂРѕРІРµСЂСЏРµРј РЅР° РЅРµСЂР°РІРЅРѕСЃС‚СЊ (100 != 50)
 #         self.assertNotEqual(runner1.distance, runner2.distance)
 #
 # if __name__ == '__main__':
 #     unittest.main()
 # ***********************************************************************
-# Меняем ожидаемое значение в test_walk. Сейчас ожидается, что дистанция после 10 вызовов walk будет 50.
-# Изменим это значение на 40, чтобы посмотреть, что тест не пройдёт.
+# РњРµРЅСЏРµРј РѕР¶РёРґР°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РІ test_walk. РЎРµР№С‡Р°СЃ РѕР¶РёРґР°РµС‚СЃСЏ, С‡С‚Рѕ РґРёСЃС‚Р°РЅС†РёСЏ РїРѕСЃР»Рµ 10 РІС‹Р·РѕРІРѕРІ walk Р±СѓРґРµС‚ 50.
+# РР·РјРµРЅРёРј СЌС‚Рѕ Р·РЅР°С‡РµРЅРёРµ РЅР° 40, С‡С‚РѕР±С‹ РїРѕСЃРјРѕС‚СЂРµС‚СЊ, С‡С‚Рѕ С‚РµСЃС‚ РЅРµ РїСЂРѕР№РґС‘С‚.
 
 class RunnerTest(unittest.TestCase):
 
@@ -38,7 +38,7 @@ class RunnerTest(unittest.TestCase):
         runner = Runner("Walker")
         for _ in range(10):
             runner.walk()
-        # Специально меняем на 40 (правильно 50)
+        # РЎРїРµС†РёР°Р»СЊРЅРѕ РјРµРЅСЏРµРј РЅР° 40 (РїСЂР°РІРёР»СЊРЅРѕ 50)
         self.assertEqual(runner.distance, 40)
 
     def test_run(self):
@@ -50,11 +50,11 @@ class RunnerTest(unittest.TestCase):
     def test_challenge(self):
         runner1 = Runner("Runner1")
         runner2 = Runner("Runner2")
-        # Вызываем у первого run, а у второго walk 10 раз
+        # Р’С‹Р·С‹РІР°РµРј Сѓ РїРµСЂРІРѕРіРѕ run, Р° Сѓ РІС‚РѕСЂРѕРіРѕ walk 10 СЂР°Р·
         for _ in range(10):
             runner1.run()
             runner2.walk()
-        # Проверяем, что дистанции не равны (100 != 50)
+        # РџСЂРѕРІРµСЂСЏРµРј, С‡С‚Рѕ РґРёСЃС‚Р°РЅС†РёРё РЅРµ СЂР°РІРЅС‹ (100 != 50)
         self.assertNotEqual(runner1.distance, runner2.distance)
 
 if __name__ == '__main__':
